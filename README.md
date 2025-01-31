@@ -10,22 +10,31 @@ This repository contains automation scripts developed to improve media archiving
 
 Some files, such as proprietary datasets and spreadsheets used in the storage analysis, are omitted due to confidentiality. However, the repository includes scripts and general documentation outlining the methodology.  
 
+---
+
 ## **Projects in This Repository**  
 
 ### **1. Batch Rename Script**  
-- **Description:** Automates batch renaming of media files based on shot lists and metadata.  
+- **Description:** Automates batch renaming of video files based on structured naming conventions. Users provide a catalog number, sequential numbering, and optional descriptions, while the script automatically detects video resolution and appends it to filenames. A **shotlist spreadsheet** is generated to document the renamed files.  
 - **Key Features:**  
-  - Standardizes filenames for consistency in the DAM system  
-  - Uses regex-based pattern matching to automate renaming  
-  - Improves searchability and file organization  
+  - Renames video files in bulk based on user input.  
+  - Automatically detects and appends video resolution to filenames.  
+  - **Does not duplicate files—renaming is applied in place** (backups recommended).  
+  - Generates a **shotlist spreadsheet** listing renamed files.  
+  - Checks for required dependencies and installs missing libraries automatically.  
+
+---
 
 ### **2. Storage Analysis Scripts**  
-- **Description:** Analyzes file storage directories to identify trends in file usage and space consumption.  
+- **Description:** The storage analysis scripts scan directories, compile file data, and generate structured reports for optimizing storage management. These tools help track file sizes, detect redundant files, and ensure consistency in naming conventions.  
 - **Key Features:**  
-  - Uses **Pandas** for file size and metadata analysis  
-  - Generates reports identifying redundant or oversized files  
-  - Assists in optimizing storage management  
-- **Note:** The Excel spreadsheet containing proprietary data has been omitted. The scripts included provide the methodology and can be adapted for other datasets.  
+  - **Directory scanning**: Extracts file paths, sizes, and extensions from directories and subdirectories.  
+  - **Job number validation**: Cross-references filenames against expected **job numbers** to identify missing or misnamed files.  
+  - **CSV integration**: Merges scan results with external datasets for deeper analysis.  
+  - **Storage efficiency analysis**: Generates reports to identify large files and redundant data.  
+  - Uses **Pandas** for data processing and report generation.  
+
+---
 
 ## **Installation & Usage**  
 
@@ -40,24 +49,40 @@ cd SMU_MediaArchiving_AutomationProjects
 ```
 
 ### **Running the Scripts**  
-Each project has its own directory with a `README.md` providing specific usage instructions. Example usage for the **Batch Rename Script**:  
+Each project has its own directory with a `README.md` providing specific usage instructions.  
 
+**Run Batch Rename Script:**  
 ```bash
-python batch_rename.py --source-folder /path/to/files --pattern "IMG_####"
+python batchRename.py
 ```
+The script will prompt the user for input, including the folder location, catalog number, sequential number, and optional descriptions.  
 
-## **Purpose and Impact**  
-These automation projects were designed to improve the efficiency of media archiving processes by reducing manual effort and minimizing human error. The batch renaming script streamlines file organization, while the storage analysis tools provide insights into space usage, helping to optimize data storage strategies.  
+**Run Storage Analysis Script:**  
+```bash
+python dataStorageAnalysis.py --input /path/to/storage/directory
+```
+This script scans the directory and generates reports on storage usage.  
+
+---
+
+## **Project Purpose & Benefits**  
+These automation projects were designed to improve the efficiency of media archiving processes by reducing manual effort and minimizing human error. The **batch renaming script** ensures consistent file naming, while the **storage analysis tools** provide insights into space usage and missing files, helping to optimize data storage strategies.  
+
+---
 
 ## **Future Enhancements**  
-- Additional automation for metadata extraction and categorization  
-- Expanded storage analysis to include predictive file management recommendations  
+- Additional automation for metadata extraction and categorization.  
+- Expanded storage analysis with predictive file management recommendations.  
+
+---
 
 ## **Contributions & Contact**  
 **Crystal Hollis** – `crystaljhollis@gmail.com`  
 [GitHub Profile](https://github.com/crystaljhollis)  
 
 For inquiries, suggestions, or collaboration, feel free to open an issue or submit a pull request.  
+
+---
 
 ## **License**  
 MIT License – Free to use, modify, and distribute with attribution.  
