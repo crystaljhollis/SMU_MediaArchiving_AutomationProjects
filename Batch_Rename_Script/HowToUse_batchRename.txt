@@ -1,0 +1,33 @@
+How to use batchRename.py
+
+1. Read the Requirements.txt for steps on how to install Python and the required libraries.
+
+2. Right Click on batchRename.py and select Open With > IDLE (or a Python Compiler of your choice). IDLE should've been installed alongside Python.
+
+3. Go to Run > Run Module 
+
+4. Wait for it to initialize. It will check for the required libraries. If the libraries are not installed, it will automatically install it for you.
+
+5. A message will appear: "This script will batch rename video files and generate a shotlist in a spreadsheet." Press Ok
+
+6. A message will appear: "Please select the directory that contains the original video files to rename." Press Ok. Navigate to and select the folder with the videos you want to batch rename.
+
+7. A message will appear: "Please select the directory where the renamed video files will be saved." Press Ok. You can choose the same folder or you can choose a different folder. THE BATCH RENAME WILL OVERRIDE THE FILE NAME. It will not make copies and put it into a new folder. It is recommended to back up the originals in NegNumber_ProjectFolder before editing the files.
+
+8. A message will appear: "Enter the catalog number that will be used as the base identifier in the filenames (e.g., 12345)." Press Ok. Do not add the V, this script will automatically add the V.
+
+9. A message will appear: "You can add additional info to the filenames (e.g., video title, Interview, etc.). Leave it empty if not needed." Press Ok. You can write or leave it blank. Don't add the resolutions (4k, 720, UHD etc.) the script will automatically read the video's resolution and add it to the filename.
+
+10. A message will appear: "Enter the starting number for the sequential numbering (e.g., 1, 2, 3...)." Press Ok. Enter your starting sequential number.
+
+11. It will now process. Please wait until it is finished. If you're using IDLE you can see the progress of the processing in the IDLE Shell window. 
+
+12. The Shell Window will tell you when it is finished and where the shotlist spreadsheet is exported (same place as the output folder).
+
+Keep in mind there is no undo button. However you could just move the shotlist out of the folder and run it again and copy the new list of file names to the old shotlist (so you can retain the list of original file names). Keeping this spreadsheet is handy as is, but you can copy and paste it to the SMU Shotlist template you can download in the Video Toolbox. 
+
+I highly recommend copying the script and saving it to your local computer. Treat it like it is a Word Document, the script is writable. However I have a back up copy in case something goes wrong. 
+
+
+If you have questions about this script, feel free to reach out to me.
+Crystal Hollis crystaljhollis@gmail.com 

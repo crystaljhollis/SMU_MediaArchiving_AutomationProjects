@@ -1,0 +1,53 @@
+# Running the script requires Python. Installing Python also installs IDLE, Python's Integrated Development and Learning Environment (IDE). 
+# IDLE is open source, but you can run the script using IDLE, the terminal, or any Integrated Development Environment (IDE) of your choice. 
+# Learn more:
+# https://wiki.python.org/moin/IntegratedDevelopmentEnvironments
+# https://realpython.com/run-python-scripts/
+# 
+# For questions, contact Crystal Hollis at crystaljhollis@gmail.com.
+
+# Instructions for first-time use:
+
+# 1. Open the Terminal (macOS) or Command Prompt/PowerShell (Windows).
+#    - On macOS: You can find the Terminal in Applications > Utilities, or by pressing Command + Space and typing "Terminal".
+#    - On Windows: Press Win + R, type "cmd" or "powershell", and press Enter.
+
+# 2. Check if Python is installed by typing `python3 --version` and pressing Enter.
+#    - If Python is not found, download and install the latest version from https://www.python.org/downloads/.
+#    - During installation, make sure to check the box that says "Add Python [version number] to PATH" to ensure you can use Python from the command line.
+
+# 3. Navigate to Your Project Directory:
+#    Use the `cd` command to move to the directory where your project is stored. Replace `path/to/your/project` with the actual file path.
+
+#    - On macOS/Linux:
+#        cd ~/path/to/your/project
+#    
+#    - On Windows (Command Prompt):
+#        cd C:\path\to\your\project
+#    
+#    - On Windows (PowerShell):
+#        Set-Location "C:\path\to\your\project"
+
+#    Example Usage:
+#    If your project is stored on a mounted network drive or external volume, adjust accordingly:
+#
+#    - Mac/Linux Example (Mounted Drive):
+#        cd /Volumes/YourDriveName/ProjectFolder
+#
+#    - Windows Example (Mapped Drive or External Storage):
+#        cd X:\ProjectFolder
+#        (Replace `X:` with the correct drive letter.)
+
+# 4. Optional: Install the required Python packages using the requirements.txt file by running:
+#    pip install -r requirements.txt
+#    (If using Python 3.12.5 or later, you may need to use `pip3 install -r requirements.txt` instead.)
+#
+#    - If pip is not recognized, you may need to add Python and pip to PATH.
+#    - The easiest fix is to reinstall Python and ensure the "Add Python to PATH" option is selected during installation.
+#
+#    However, this step is optional. The batchRename script includes a conditional check and will automatically install any missing packages.
+
+# Required Python Packages:
+pandas
+moviepy
+openpyxl
