@@ -1,0 +1,13 @@
+# required
+gradio
+
+# optional (uncomment later)
+# requests
+# pandas
+# python-docx
+# pdfplumber
+# nltk
+# wordfreq
+# symspellpy
+# datamuse
+# pytrends
